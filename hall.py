@@ -9,12 +9,12 @@ class MontyHall:
 		self.choose_another = False
 
 	def __repr__(self):
-		win_ratio = self.wins / self.iterations
+		win_ratio = self.wins / self.iterations * 100
 		loses = self.iterations - self.wins
-		lose_ratio = loses / self.iterations
+		lose_ratio = loses / self.iterations * 100
 		return f"""
-			Win ratio: {win_ratio}
-			Lose ratio: {lose_ratio}
+			Win ratio: {round(win_ratio, 2)}%
+			Lose ratio: {round(lose_ratio, 2)}%
 			Iteration: {self.iterations} 
 			Wins: {self.wins}
 			Loses: {loses}"""
